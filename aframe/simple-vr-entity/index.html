@@ -18,7 +18,9 @@
 
     <a-scene>
 
-      
+      <a-assets>
+        <a-asset-item id="drone" src="models/Drone.glb">
+      </a-assets>
 
       <!-- Sky / Background -->
 
@@ -36,7 +38,7 @@
 
       <a-entity geometry="primitive: plane; width: 10; height: 10"
 
-                material="color: #7BC8A4"
+                material="src: textures/metal_texture.jpg; repeat: 2 2; roughness: 1"
 
                 rotation="-90 0 0"
 
@@ -113,14 +115,15 @@
                 position="0 0.5 -3">
 
       </a-entity>
+      <a-gltf-model src="#drone" position="0 1.2 -3" scale="1.5 1.5 1.5"></a-gltf-model>
 
 
-
+ 
       <!-- Sphere -->
 
       <a-entity geometry="primitive: sphere; radius: 0.5"
 
-                material="color: #EF2D5E"
+                material="src: textures/metal_texture.jpg"
 
                 position="-2 1 -4">
 
@@ -132,7 +135,7 @@
 
       <a-entity geometry="primitive: cylinder; height: 1.5; radius: 0.5"
 
-                material="color: #FFC65D"
+                material="src: textures/metal_texture.jpg"
 
                 position="2 0.75 -4">
 
